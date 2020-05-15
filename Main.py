@@ -74,8 +74,8 @@ def train(model, device, train_loader, optimizer, epoch):
                            dtype=np.float32)
         frames.append(silence)
         optimizer.step()
-        # Just 200 steps per epoach
-        if batch_idx == 200:
+        # Just 300 steps per epoch
+        if batch_idx == 300:
             break
 
     wf = wave.open("sgd_lr_1_0_bs256.wav", 'wb')
